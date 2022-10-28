@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
         else if (num1 == random1){
 
-            if(sayac>9){
+            if(sayac>11){
                 skor=10;
             }else if(sayac>7){
                 skor=30;
