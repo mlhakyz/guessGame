@@ -18,11 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        editNum1 = findViewById(R.id.editTextTextPersonName)
+        editNum1 = findViewById(R.id.editTextNumber)
         textResult = findViewById(R.id.textView)
-
-        editNum1.setText("Sayı Giriniz!")
-
         random1 = (0..100).shuffled().last()
     }
     fun btnTahmin(view: View?) {
@@ -60,6 +57,6 @@ class MainActivity : AppCompatActivity() {
     fun btnYeniden(view: View?) {
 
         random1 = (0..100).shuffled().last()
-        textResult.setText("Sayı giriniz");
+        textResult.setText("Sonuç!");
     }
 }
