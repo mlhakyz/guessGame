@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     lateinit var editNum1: EditText
@@ -23,40 +24,48 @@ class MainActivity : AppCompatActivity() {
         random1 = (0..100).shuffled().last()
     }
     fun btnTahmin(view: View?) {
-        sayac += 1;
 
-        val num1 = editNum1.text.toString().toInt()
-        if (num1 > random1){
-            textResult.setText("Daha Küçük Sayı Girin");
-        }
-        else if (num1 < random1){
-            textResult.setText("Daha Büyük Sayı Girin");
+        if(editNum1.text.toString() != "" ){
+            sayac += 1;
 
-
-        }
-        else if (num1 == random1){
-
-            if(sayac>9){
-                skor=10;
-            }else if(sayac>7){
-                skor=30;
+            val num1 = editNum1.text.toString().toInt()
+            if (num1 > random1){
+                textResult.setText("Daha Küçük Sayı Girin");
             }
-            else if(sayac>5){
-                skor=50;
-            }else if(sayac>3){
-                skor=70;
-            }else if(sayac>2){
-                skor=90;
-            }else if(sayac>0){
-                skor=100;
+            else if (num1 < random1){
+                textResult.setText("Daha Büyük Sayı Girin");
+
+
             }
-            textResult.setText("Skor: "+skor.toString() + " Tahmin Sayısı: "+sayac.toString());
+            else if (num1 == random1){
+
+                if(sayac>9){
+                    skor=10;
+                }else if(sayac>7){
+                    skor=30;
+                }
+                else if(sayac>5){
+                    skor=50;
+                }else if(sayac>3){
+                    skor=70;
+                }else if(sayac>2){
+                    skor=90;
+                }else if(sayac>0){
+                    skor=100;
+                }
+                textResult.setText("Skor: "+skor.toString() + " Tahmin Sayısı: "+sayac.toString());
+            }
         }
+        else {
+            Toast.makeText(getApplicationContext(),"Sayı Giriniz!",Toast.LENGTH_LONG).show();
+        }
+
+
 
     }
     fun btnYeniden(view: View?) {
 
         random1 = (0..100).shuffled().last()
-        textResult.setText("Sonuç!");
+        textResult.setText("Sonuç: ");
     }
 }
