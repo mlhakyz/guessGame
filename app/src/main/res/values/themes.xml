@@ -13,4 +13,12 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Button.Purple" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/purple_200</item>
+    </style>
+    <style name="Button.Red" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">#FF0404</item>
+    </style>
+
 </resources>
