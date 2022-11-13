@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         editNum1 = findViewById(R.id.editTextNumber)
         textResult = findViewById(R.id.textView)
         random1 = (0..100).shuffled().last()
+
     }
     fun btnTahmin(view: View?) {
 
