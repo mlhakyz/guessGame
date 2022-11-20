@@ -60,13 +60,10 @@ class MainActivity : AppCompatActivity() {
         else {
             Toast.makeText(getApplicationContext(),"Sayı Giriniz!",Toast.LENGTH_LONG).show();
         }
-
-
-
     }
     fun btnYeniden(view: View?) {
-
         random1 = (0..100).shuffled().last()
+        sayac = 0
         textResult.setText("Sonuç: ");
     }
 }

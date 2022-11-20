@@ -13,7 +13,7 @@
         android:layout_height="48dp"
         android:background="@drawable/mybutton"
         android:onClick="btnTahmin"
-        android:text="Tahmin Et "
+        android:text="Lets Guess"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button2"
